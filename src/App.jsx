@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css'
 
-
+//LE COUNTDOWN EST A FAIRE
 
 function App() {
 const [counter,changeCounter] = useState(0);
@@ -15,6 +15,13 @@ return ++previousValue;
 });
 };
 
+const onChangeCountDown =  ()=> {
+  changeCountDown(()=>{
+
+  })
+}
+
+
 const onChangeInputValue = (event) => {
 changeInputValue(() => {
 return event.target.value;
@@ -24,6 +31,10 @@ return event.target.value;
 const add = () => {
 console.log(inputValue);
 };
+
+
+
+
 
   return ( 
   <>
@@ -38,6 +49,8 @@ console.log(inputValue);
   </ul>
   <p>nombre de compétences validées : <span >{counter}</span></p>
   <button onClick={onChangeCounter}>VALIDER UNE COMPETENCE</button>
+
+  <p>compte a rebours : <span>{100}</span></p>
   </>
   )
 }
